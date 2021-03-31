@@ -4,7 +4,7 @@ using System.Text;
 using Parking.Domain.Contracts;
 namespace Parking.Domain.Models
 {
-    class PersonUpdateModel : IPersonIdentity
+    public class PersonUpdateModel : IPersonIdentity
     {
         public int Id { get; set; }
         public string Name { get; set; }

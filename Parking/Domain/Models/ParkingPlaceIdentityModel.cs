@@ -4,7 +4,7 @@ using System.Text;
 using Parking.Domain.Contracts;
 namespace Parking.Domain.Models
 {
-    class ParkingPlaceIdentityModel : IParkingPlaceIdentity
+    public class ParkingPlaceIdentityModel : IParkingPlaceIdentity
     {
         public int Id { get; }
 

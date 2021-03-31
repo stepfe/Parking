@@ -10,7 +10,6 @@ namespace Parking
         public int Flor { get; set; }
         public int Number { get; set; }
         public string Auto { get; set; }
-
         public Person Owner { get; set; }
     }
 }
