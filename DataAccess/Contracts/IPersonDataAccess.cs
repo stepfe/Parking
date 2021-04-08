@@ -11,5 +11,6 @@ namespace DataAccess.Contracts
         Parking.Person Get(PersonIdentityModel id);
         Parking.Person GetOwnerOfPlace(IPersonContainer placeId);
         Parking.Person Update(PersonIdentityModel id, PersonUpdateModel person);
+        void Delete(PersonIdentityModel id);
     }
 }

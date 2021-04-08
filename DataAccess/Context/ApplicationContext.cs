@@ -31,9 +31,9 @@ namespace DataAccess.Context
         {
             modelBuilder.Entity<ParkingPlace>(entity =>
             {
-                entity.HasOne(place => place.Owner)
+                entity.HasOne(place => place.Person)
                       .WithMany(person => person.Places)
-                      .HasForeignKey(place => place.OwnerId);
+                      .HasForeignKey(place => place.PersonId);
 
                 entity.Property(parking => parking.Number).IsRequired();
                 entity.HasIndex(parking => parking.Number).IsUnique();

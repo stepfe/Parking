@@ -4,9 +4,8 @@ using System.Text;
 using Parking.Domain.Contracts;
 namespace Parking.Domain.Models
 {
-    public class ParkingPlaceUpdateModel : IPersonContainer, IParkingPlaceIdentity
+    public class ParkingPlaceUpdateModel : IPersonContainer
     {
-        public int Id { get; set; }
         public int Flor { get; set; }
         public int Number { get; set; }
         public string Auto { get; set; }

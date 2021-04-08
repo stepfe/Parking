@@ -8,7 +8,7 @@ namespace Parking
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Emaile { get; set; }
+        public string Email { get; set; }
         public string PhoneNumber { get; set; }
 
         public List<ParkingPlace> Places { get; } = new List<ParkingPlace>();

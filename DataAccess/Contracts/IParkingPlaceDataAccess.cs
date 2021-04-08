@@ -9,8 +9,9 @@ namespace DataAccess.Contracts
     {
         Parking.ParkingPlace Insert(ParkingPlaceUpdateModel place);
         Parking.ParkingPlace Get(ParkingPlaceIdentityModel id);
-        IEnumerable<Parking.ParkingPlace> GetPersonPlaces(PersonIdentityModel id);
+        List<Parking.ParkingPlace> GetPersonPlaces(PersonIdentityModel id);
         Parking.ParkingPlace Update(ParkingPlaceIdentityModel id, ParkingPlaceUpdateModel place);
+        void Delete(ParkingPlaceIdentityModel id);
 
     }
 }

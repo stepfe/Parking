@@ -12,7 +12,7 @@ using AutoMapper;
 
 namespace DataAccess.Implementations
 {
-    class PersonDataAccess : IPersonDataAccess
+    public class PersonDataAccess : IPersonDataAccess
     {
         private ApplicationContext ApplicationContext { get; }
         private IMapper Mapper { get; }
@@ -63,6 +63,16 @@ namespace DataAccess.Implementations
             var result = this.ApplicationContext.Person.Where(u => u.Id == placeId.PersonId).First();
 
             return this.Mapper.Map<Parking.Person>(result);
+        }
+
+        public void Delete(PersonIdentityModel id)
+        {
+            var personToDelete = this.ApplicationContext.Person.Where(p => p.Id == id.Id).First();
+
+            this.ApplicationContext.Attach(personToDelete);
+            this.ApplicationContext.Remove(personToDelete);
+
+            this.ApplicationContext.SaveChanges();
         }
     }
 }
