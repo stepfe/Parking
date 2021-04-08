@@ -40,14 +40,14 @@ namespace DataAccess.Implementations
 
         public Parking.ParkingPlace Get(ParkingPlaceIdentityModel id)
         {
-            var result = this.ApplicationContext.ParkingPlaces.Where(u => u.Id == id.Id).First();
+            var result = this.ApplicationContext.ParkingPlaces.Where(p => p.Id == id.Id).First();
 
             return this.Mapper.Map<Parking.ParkingPlace>(result);
         }
 
         public Parking.ParkingPlace Update(ParkingPlaceIdentityModel id, ParkingPlaceUpdateModel place)
         {
-            var existing = this.ApplicationContext.ParkingPlaces.Where(u => u.Id == id.Id).First();
+            var existing = this.ApplicationContext.ParkingPlaces.Where(p => p.Id == id.Id).First();
 
             var result = this.Mapper.Map(place, existing);
 

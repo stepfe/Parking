@@ -40,14 +40,14 @@ namespace DataAccess.Implementations
 
         public Parking.Person Get(PersonIdentityModel id)
         {
-            var result = this.ApplicationContext.Person.Where(u => u.Id == id.Id).First();
+            var result = this.ApplicationContext.Person.Where(p => p.Id == id.Id).First();
 
             return this.Mapper.Map<Parking.Person>(result);
         }
 
         public Parking.Person Update(PersonIdentityModel id, PersonUpdateModel person)
         {
-            var existing = this.ApplicationContext.Person.Where(u => u.Id == id.Id).First();
+            var existing = this.ApplicationContext.Person.Where(p => p.Id == id.Id).First();
 
             var result = this.Mapper.Map(person, existing);
 
@@ -60,7 +60,7 @@ namespace DataAccess.Implementations
 
         public Parking.Person GetOwnerOfPlace(IPersonContainer placeId)
         {
-            var result = this.ApplicationContext.Person.Where(u => u.Id == placeId.PersonId).First();
+            var result = this.ApplicationContext.Person.Where(p => p.Id == placeId.PersonId).First();
 
             return this.Mapper.Map<Parking.Person>(result);
         }
