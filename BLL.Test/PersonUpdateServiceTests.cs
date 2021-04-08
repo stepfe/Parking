@@ -14,7 +14,7 @@ namespace BLL.Test
     {
 
         [Test]
-        public void TestUpdateUser()
+        public void TestUpdateperson()
         {
             Mock<IPersonDataAccess> personDataAccess = new Mock<IPersonDataAccess>();
             Person expected = new Person { Id = 1, Name = "Who", Email = "who@yandex.ru", PhoneNumber = "89500492805" };

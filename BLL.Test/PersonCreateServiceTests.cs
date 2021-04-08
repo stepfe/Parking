@@ -13,7 +13,7 @@ namespace BLL.Test
     class PersonCreateServiceTests
     {
         [Test]
-        public void TestCreateUser()
+        public void TestCreateperson()
         {
             Mock<IPersonDataAccess> personDataAccess = new Mock<IPersonDataAccess>();
             Person expected = new Person { Id = 1, Name = "Who", Email = "who@yandex.ru", PhoneNumber = "89500492805" };
