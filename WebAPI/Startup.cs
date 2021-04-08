@@ -45,7 +45,7 @@ namespace WebAPI
             services.Add(new ServiceDescriptor(typeof(IPersonDeleteService), typeof(PersonDeleteService), ServiceLifetime.Scoped));
 
             // place Services BLL
-            services.Add(new ServiceDescriptor(typeof(IPersonCreateService), typeof(ParkingPlaceCreateService), ServiceLifetime.Scoped));
+            services.Add(new ServiceDescriptor(typeof(IParkingPlaceCreateService), typeof(ParkingPlaceCreateService), ServiceLifetime.Scoped));
             services.Add(new ServiceDescriptor(typeof(IParkingPlaceGetService), typeof(ParkingPlaceGetService), ServiceLifetime.Scoped));
             services.Add(new ServiceDescriptor(typeof(IParkingPlaceUpdateService), typeof(ParkingPlaceUpdateService), ServiceLifetime.Scoped));
             services.Add(new ServiceDescriptor(typeof(IParkingPlaceDeleteService), typeof(ParkingPlaceDeleteService), ServiceLifetime.Scoped));
